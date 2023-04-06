@@ -1,0 +1,30 @@
+<div id="merchant_name">
+ <h1> <%=@individual_merchant.name%> </h1>
+</div>
+
+<%n = 1%> 
+<%@merchant.each do |item| %>
+<div id="item_<%=n%>">
+
+Name: 
+  <div id="name">
+    <%=item.name%>
+  </div>
+
+Description:
+  <div id="description">
+    <%=item.description%>
+  </div>
+
+Unit Price: 
+  <div id="unit_price">
+    <%=item.unit_price%>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+  <%n = n + 1%>
+<%end%>
