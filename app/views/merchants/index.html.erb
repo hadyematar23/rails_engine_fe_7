@@ -1,7 +1,8 @@
 <h1>List of Merchants</h1>
 
 <%n = 1%> 
-<%@merchants.each do |merchant| %>
+
+<%@merchants.retreive_merchants.each do |merchant| %>
 <div id="merchant_<%=n%>">
   <%=link_to merchant.name, "/merchants/#{merchant.id}" %>
   <%n = n + 1%>

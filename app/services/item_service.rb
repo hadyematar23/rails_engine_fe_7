@@ -1,11 +1,11 @@
-class MerchantsService
+class ItemService
 
-  def get_merchants
-    get_url("merchants")
+  def initialize(item)
+    @item = item
   end
 
-  def search_merchants(search_term)
-    get_url("/api/v1/merchants/find_all?name=#{search_term}")
+  def get_items_info
+    get_url("items/#{@item}")
   end
 
   def get_url(url)
@@ -16,4 +16,6 @@ class MerchantsService
   def connection 
     Faraday.new(url: "http://localhost:3000/api/v1/")
   end
+
+
 end

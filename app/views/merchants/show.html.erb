@@ -1,14 +1,10 @@
-<div id="merchant_name">
- <h1> <%=@individual_merchant.name%> </h1>
-</div>
-
 <%n = 1%> 
-<%@merchant.each do |item| %>
+<%@items.each do |item| %>
 <div id="item_<%=n%>">
 
 Name: 
   <div id="name">
-    <%=item.name%>
+    <%=link_to item.name, "/items/#{item.id}"%>
   </div>
 
 Description:

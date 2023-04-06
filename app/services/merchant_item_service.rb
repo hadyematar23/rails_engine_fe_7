@@ -1,7 +1,6 @@
 class MerchantItemService
 
   def initialize(merchant)
-    
     @merchant = merchant
   end
 
@@ -17,6 +16,4 @@ class MerchantItemService
   def connection 
     Faraday.new(url: "http://localhost:3000/api/v1/")
   end
-
-
 end

@@ -1,0 +1,16 @@
+<h1>Search Results</h1>
+
+<%n =1 %>
+<%@results.each do |merchant|%>
+Merchant Name
+<div id="merchant_<%=n%>">
+  <%=merchant.name%>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<%n= n+1%>
+<%end %>

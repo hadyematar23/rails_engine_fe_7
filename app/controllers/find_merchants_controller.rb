@@ -1,11 +1,8 @@
-class MerchantsController < ApplicationController
+class FindMerchantsController < ApplicationController
   before_action :initialize_merchants_facade
   
-  def index 
-  end
-
-  def show 
-    @items = @merchants.retreive_merchant_items(params[:id])
+  def index
+    @results = @merchants.search_merchants(params[:search_term])
   end
 
   private 
@@ -13,4 +10,5 @@ class MerchantsController < ApplicationController
   def initialize_merchants_facade
     @merchants ||= MerchantsFacade.new
   end
+
 end
